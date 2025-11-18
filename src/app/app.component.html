@@ -5,6 +5,9 @@
 <main class="main">
   <h1>Hola, {{ title }}</h1>
   <p>¡Felicidades Axel, la aplicación funciona!. 🎉 yuhu</p>
+
+  <input type="text" [(ngModel)]="text" placeholder="Escribe algo..." />
+  <button (click)="save()">Guardar</button>
 </main>
 
 <router-outlet />
