@@ -7,11 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class MyService {
 
-  private url = 'http://localhost:3000/api/textos'; //Call to endpoint
+  private url = 'http://localhost:8080/api/textos'; //Call to endpoint
 
   constructor(private http: HttpClient) {}
 
   saveText(text: string): Observable<any> {
     return this.http.post(this.url, { text });
+  }
+
+  getTexts(): Observable<any[]>{
+    return this.http.get<any[]>(this.url);
   }
 }

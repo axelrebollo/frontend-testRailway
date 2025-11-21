@@ -8,6 +8,13 @@
 
   <input type="text" [(ngModel)]="text" placeholder="Escribe algo..." />
   <button (click)="save()">Guardar</button>
+
+  <h2>Textos guardados:</h2>
+  <ul>
+    <li *ngFor="let t of textos">
+      {{ t.text }} — <small>{{ t.createdAt }}</small>
+    </li>
+  </ul>
 </main>
 
 <router-outlet />
